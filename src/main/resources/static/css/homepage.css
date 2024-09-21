@@ -66,7 +66,11 @@ body{
     font-weight: 700;
 }
 
-.card-text{
-    font-size: small;
-    height: 40px;
+.card-text {
+    white-space: normal;       /* 自動換行 */
+    overflow: hidden;          /* 隱藏超出部分 */
+    text-overflow: ellipsis;   /* 使用省略號表示超出部分 */
+    display: -webkit-box;      /* 使用盒模型 */
+    -webkit-line-clamp: 3;     /* 顯示的行數 */
+    -webkit-box-orient: vertical;  /* 垂直排列 */
 }
